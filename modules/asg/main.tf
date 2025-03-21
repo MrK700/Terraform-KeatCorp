@@ -14,7 +14,7 @@ data "aws_ami" "amazon_linux" {
   }
 }
 
- Launch template
+# Launch template
 resource "aws_launch_template" "main" {
   name_prefix   = "${var.project}-${var.environment}-lt-"
   image_id      = data.aws_ami.amazon_linux.id
